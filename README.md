@@ -1,0 +1,2 @@
+# Customer_Subscription
+A company launch their android  and iOS base app to grow  their business. But there is a problem that, how to promote this app and offer who really want to utilize it. So for that company decided to give free trial to each and every customer for 24 hours and collect data from the customers. In this scenario some customer purchase the app and someone not. According to the company want to give special offer to the customer who are not interested to buy without offer and grow their business.   This is a classification problem

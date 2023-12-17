@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <style>
+        /* resets */
+        body { margin:0px; padding:0px; }
+
+        /* main */
+        header {
+            height: 360px;
+            z-index: 10;
+        }
+        .header-banner {
+            background-color: #333;
+            background-image: url('https://imageio.forbes.com/specials-images/imageserve/5d9182dc6c7c8f000990b672/0x0.jpg?format=jpg&width=1200');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+        }
+
+        header h1 {
+            background-color: rgba(18,72,120, 0.8);
+            color: #fff;
+            padding: 0 1rem;
+            position: absolute;
+            top: 2rem; 
+            left: 2rem;
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%; 
+        }
+
+        nav {
+            width: 100%;
+            height: 60px;
+            background: #292f36;
+            postion: fixed;
+            z-index: 10;
+        }
+
+        nav div {
+            color: white;
+            font-size: 2rem;
+            line-height: 60px;
+            position: absolute;
+            top: 0;
+            left: 2%;
+            visibility: hidden;
+        }
+        .visible-title {
+            visibility: visible;
+        }
+
+        nav ul { 
+            list-style-type: none;
+            margin: 0 2% auto 0;
+            padding-left: 0;
+            text-align: right;
+            max-width: 100%;
+        }
+        nav ul li { 
+            display: inline-block; 
+            line-height: 60px;
+            margin-left: 10px;
+        }
+        nav ul li a {
+            text-decoration: none; 
+            color: #a9abae;
+        }
+
+        /* demo content */
+        body { 
+            color: #292f36;
+            font-family: helvetica;
+            line-height: 1.6;
+        }
+        .content{ 
+            margin: 0 auto;
+            padding: 4rem 0;
+            width: 960px;
+            max-width: 100%;
+        }
+        article {
+            float: left;
+            width: 720px;
+        }
+        article p:first-of-type {
+            margin-top: 0;
+        }
+        aside {
+            float: right;
+            width: 120px;
+        }
+        p img {
+            max-width: 100%;
+        }
+
+        @media only screen and (max-width: 960px) {
+            .content{ 
+                padding: 2rem 0;
+            }
+            article {
+                float: none;
+                margin: 0 auto;
+                width: 96%;
+            }
+            article:last-of-type {  
+                margin-bottom: 3rem;
+            }
+            aside {  
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+    </style>
+
+
+    <script>
+        /* ========================================== 
+        scrollTop() >= 300
+        Should be equal the the height of the header
+        ========================================== */
+
+        $(window).scroll(function(){
+            if ($(window).scrollTop() >= 300) {
+                $('nav').addClass('fixed-header');
+                $('nav div').addClass('visible-title');
+            }
+            else {
+                $('nav').removeClass('fixed-header');
+                $('nav div').removeClass('visible-title');
+            }
+        });
+
+    </script>
+
+
+    <header>
+        <div class="header-banner">
+            <h1>Directing Customer to Subscription Through Financial App Behaviour Analysis</h1>
+        </div>
+        <div class="clear"></div>
+        <nav>
+            <div class="site-title">Directing Customer to Subscription Through Financial App Behaviour Analysis</div>
+            <ul>
+                <li><a href="/predict_page">Predict</a></li>
+                <li><a href="/about_page">About Us</a></li>
+                
+            <ul>
+        </nav>
+    </header>
+         
+    <section class="content">
+        <article>
+            
+          <h2>PROBLEM STATEMENT</h2>
+              <ul>
+                  <li>A Company/Organization/Institute is launching a website there.</li>
+                  <li>It has two versions, free and premium.</li>
+                  <li>The free version of the app contains basic features and if customers want to use premium features, they have to pay a certain amount to unlock them.</li>
+              </ul>
+          
+          <p><img src="https://www.contus.com/blog/wp-content/uploads/2022/03/banner-image-41.4-01.png"></p>
+          
+          
+          <h2>OBJECTIVE</h2>
+              <ul>
+                  <li>The company's main goal is to sell premium versions of its apps with low advertising costs, but they don't know how. So he offers premium features of the free version of the app 24 hours a day to capture customer behavior. The company then hired machine learning engineers to gain insights from the data it collected (customer behavior).</li>
+                  <li>The company's main goal is to sell premium versions of its apps with low advertising costs, but they don't know how. So he offers premium features of the free version of the app 24 hours a day to capture customer behavior. The company then hired machine learning engineers to gain insights from the data it collected (customer behavior).</li>
+                  <li>Therefore, before starting any ML project, we need to import some necessary libraries.</li>
+              </ul>
+          
+          <p><img src="https://images.news18.com/tamil/uploads/2022/10/ott-1.jpg?im=resize,width=360,aspect=fit,type=normal"></p>
+          
+          
+          <h2>PROPOSED METHODOLOGY</h2>
+          
+          <u><b>Import essential libraries</b></u>
+              
+                  <p>It is time to import business data and see how it looks like. To import dataset and convert it to pandas DataFrame we used pandas pd.read_csv() function because of the dataset in CSV file format. The dataset file name is “FineTech_appData.csv”.</p>
+              <p>import numpy as np <i># for numeric calculation</i></p>
+              <p>import pandas as pd <i># for data analysis and manupulation</i></p>
+              <p>import matplotlib.pyplot as plt <i># for data visualization</i></p>
+              <p>import seaborn as sns <i># for data visualization</i></p>
+          
+          <u><b>Know about datasets</b></u>
+              <p>As you can see in fineTech_appData DataFrame, there are 50,000 users data with 12 different features.</p>
+              <ol>
+                <li>user</li>
+                <li>first_open</li>
+                <li>dayofweek</li>
+                <li>hour</li>
+                <li>age</li>
+                <li>screen_list</li>
+                <li>numscreens</li>
+                <li>minigame</li>
+                <li>used_premium_feature</li>
+                <li>enrolled</li>
+                <li>enrolled_date</li>
+                <li>liked</li>
+              </ol>
+    
+          <u><b>Data Visualization</b></u>
+              <p>Heatmap using the correlation matrix</p>
+              <p>Heatmap uses to find the correlation between each and every features using the correlation matrix.</p>
+              <p>In the fineTech_appData2 dataset, there is no strong correlation between any features. There is little correlation between ‘numscreens’ and ‘enrolled’. It means that those customers saw more screen they are taking premium app. There is a slight correlation between ‘minigame’ with ‘enrolled’ and ‘used_premium_feature’. The slightly negative correlation between ‘age’ with ‘enrolled’ and ‘numscreens’. It means that older customers do not use the premium app and they don’t see multiple screens.</p>
+          
+          <u><b>Machine Learning Model Building</b></u>
+              <p>The target variable is categorical type 0 and 1, so we have to use supervised classification algorithms.</p>
+              <p>To build the best model, we have to train and test the dataset with multiple Machine Learning algorithms then we can find the best ML model.</p>
+          
+          <u><b>Save the Machine Learning model</b></u>
+              <p>After completion of the Machine Learning project or building the ML model need to deploy in an application. To deploy the ML model need to save it first. To save the Machine Learning project we can use the pickle or joblib package.</p>
+          
+          <p><img src="https://learn.g2.com/hubfs/Imported%20sitepage%20images/1ZB5giUShe0gw9a6L69qAgsd7wKTQ60ZRoJC5Xq3BIXS517sL6i6mnkAN9khqnaIGzE6FASAusRr7w=w1439-h786.png"></p>
+          
+          
+          <h2>TECHNOLOGY USED</h2>
+          
+          <u><b>Python</b></u>
+              <p>To complete this project, we use python programming and it’s libraries NumPy, Pandas, Matplotlib, and Seaborn.</p>
+    
+          <u><b>HTML, CSS and JAVASCRIPT</b></u>
+              <p>Will be used to create an user interface so that all the back end activities done are kept hidden to the user. Also, the user does not face any problem while interacting with it.</p>
+        </article>
+            
+    <!--     <aside>
+            <img src="http://placehold.it/144x150">
+            <img src="http://placehold.it/144x150">
+        </aside> -->
+    </section> 
+      
+</body>
+</html>
